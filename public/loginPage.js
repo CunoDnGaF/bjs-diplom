@@ -7,9 +7,8 @@ userForm.loginFormCallback = function(data) {
         if (response.success === true) {
             location.reload();
         } else {
-            alert(response.error);
+            userForm.setLoginErrorMessage(response.error);
         }
-        console.log(response);
     })
 }
 
@@ -18,8 +17,7 @@ userForm.registerFormCallback = function(data) {
         if (response.success === true) {
             location.reload();
         } else {
-            alert(response.error);
+            userForm.setRegisterErrorMessage(response.error);
         }
-        console.log(response);
     })
 }
